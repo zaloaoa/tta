@@ -1,0 +1,67 @@
+package es.tta.guztiokeuskarapp.example;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+
+import es.tta.guztiokeuskarapp.R;
+import es.tta.guztiokeuskarapp.example.AbestiakPrimernivelActivity;
+import es.tta.guztiokeuskarapp.example.EjerciciosActivity;
+import es.tta.guztiokeuskarapp.example.presentation.DataAbestiakniveldos;
+import es.tta.guztiokeuskarapp.example.presentation.DataAbestiakniveluno;
+
+public class NivelesAbestiakActivity extends AppCompatActivity {
+
+    public final static String EXTRA_DATA_ABE_UNO ="es.tta.guztiokeuskarapp.dataabestiakniveluno";
+    public final static String EXTRA_DATA_ABE_DOS ="es.tta.guztiokeuskarapp.dataabestiakniveldos";
+
+    private DataAbestiakniveluno dataAbestiakniveluno;
+    private DataAbestiakniveldos dataAbestiakniveldos;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_niveles_abestiak);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        dataAbestiakniveluno=new DataAbestiakniveluno();
+        dataAbestiakniveldos=new DataAbestiakniveldos();
+    }
+
+    public void ejercicios(View view){
+
+        Intent intent=new Intent(this,EjerciciosActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void primernivelcanciones(View view){
+
+        Intent intent=new Intent(this,AbestiakPrimernivelActivity.class);
+        intent.putExtra(EXTRA_DATA_ABE_UNO,dataAbestiakniveluno);
+        startActivity(intent);
+
+
+    }
+
+    public void segundonivelcanciones(View view){
+        Intent intent =new Intent(this,AbestiakSegundonivelActivity.class);
+        intent.putExtra(EXTRA_DATA_ABE_DOS,dataAbestiakniveldos);
+        startActivity(intent);
+    }
+
+}

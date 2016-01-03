@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.tta.guztiokeuskarapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".example.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".example.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.LexikoActivity"
+            android:label="@string/title_activity_lexiko"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.CuentosActivity"
+            android:label="@string/title_activity_cuentos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.CancionesActivity"
+            android:label="@string/title_activity_canciones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.EjerciciosActivity"
+            android:label="@string/title_activity_ejercicios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.NivelesLexikoActivity"
+            android:label="@string/title_activity_niveles_lexiko"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.NivelesIpuinakActivity"
+            android:label="@string/title_activity_niveles_ipuinak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.NivelesAbestiakActivity"
+            android:label="@string/title_activity_niveles_abestiak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.AbestiakPrimernivelActivity"
+            android:label="@string/title_activity_abestiak_primernivel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.AbestiakSegundonivelActivity"
+            android:label="@string/title_activity_abestiak_segundonivel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.EskolaActivity"
+            android:label="@string/title_activity_eskola"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

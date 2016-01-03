@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">GUZTIOKEUSKARAPP</string>
+    <string name="action_settings">Settings</string>
+    <string name="ongietorri">Ongi etorri</string>
+    <string name="bienvenido">Bienvenido/a</string>
+    <string name="entrar">entrar/sartu</string>
+    <string name="title_activity_menu">GUZTIOKEUSKARAPP</string>
+    <string name="cuentos">Cuentos/Ipuinak</string>
+    <string name="lexiko">Léxico/Lexikoa</string>
+    <string name="canciones">Canciones/Abestiak</string>
+    <string name="ejercicios">Ejercicios/Jarduerak</string>
+    <string name="title_activity_lexiko">Léxico/Lexikoa</string>
+    <string name="saludos">Agurrak/Saludos</string>
+    <string name="escuela">Eskola/Escuela</string>
+    <string name="objetos">Etxeko objektuak-lekuak/Objetos-sitios del hogar</string>
+    <string name="adjetivos">Adjektiboak/Adjetivos</string>
+    <string name="dias">Asteko egunak/Días de la semana</string>
+    <string name="numeros">Zenbakiak/Números</string>
+    <string name="familia">Familia/Familia</string>
+    <string name="colores">Koloreak/Colores</string>
+    <string name="menuprincipal">Menú principal</string>
+    <string name="title_activity_cuentos">Cuentos/Ipuinak</string>
+    <string name="vercuentos">Ver cuentos</string>
+    <string name="contarcuentos">Contar cuentos</string>
+    <string name="title_activity_canciones">Canciones/Abestiak</string>
+    <string name="pintto">Pintto pintto</string>
+    <string name="paris">Paristik natorren</string>
+    <string name="xalala">Xalala Riki riki</string>
+    <string name="ikusi">Ikusi ikusi han</string>
+    <string name="title_activity_ejercicios">Ejercicios/Jarduerak</string>
+    <string name="lexikoa">Lexikoa</string>
+    <string name="ipuinak">Ipuinak</string>
+    <string name="abestiak">Abestiak</string>
+    <string name="title_activity_niveles_lexiko">Niveles Léxico</string>
+    <string name="primernivel">Primer nivel</string>
+    <string name="segundonivel">Segundo nivel</string>
+    <string name="tercernivel">Tercer nivel</string>
+    <string name="title_activity_niveles_ipuinak">Niveles Cuentos</string>
+    <string name="title_activity_niveles_abestiak">Niveles Canciones</string>
+    <string name="title_activity_abestiak_primernivel">GUZTIOKEUSKARAPP</string>
+    <string name="next">NEXT</string>
+    <string name="comprobar">COMPROBAR</string>
+    <string name="nivelescanciones">Niveles-canciones</string>
+    <string name="title_activity_abestiak_segundonivel">GUZTIOKEUSKARAPP</string>
+    <string name="title_activity_eskola">GUZTIOKEUSKARAPP</string>
+    <string name="agenda">agenda:agenda</string>
+    <string name="boligrafo">bolígrafo:boligrafoa</string>
+    <string name="arkatza">lápiz:arkatza</string>
+    <string name="liburu">libro:liburu</string>
+    <string name="arbela">pizarra:arbela</string>
+    <string name="koaderno">cuaderno:koadernoa</string>
+    <string name="maisu">profesor:maisu</string>
+    <string name="andereño">profesora:andereño</string>
+    <string name="errotuladore">rotulador:errotuladore</string>
+    <string name="atxingia">goma de borrar:atxingia</string>
+    <string name="jantoki">comedor:jantoki</string>
+    <string name="eskola">escuela:eskola</string>
+
+
+
+
+</resources>
