@@ -61,6 +61,50 @@
         <activity
             android:name=".example.EskolaActivity"
             android:label="@string/title_activity_eskola"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.AbestiakTercernivelActivity"
+            android:label="@string/title_activity_abestiak_tercernivel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.LexikoSegundonivelActivity"
+            android:label="@string/title_activity_lexiko_segundonivel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.EtxekoActivity"
+            android:label="@string/title_activity_etxeko"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.AdjektiboakActivity"
+            android:label="@string/title_activity_adjektiboak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.EgunakActivity"
+            android:label="@string/title_activity_egunak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.ZenbakiakActivity"
+            android:label="@string/title_activity_zenbakiak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.KoloreakActivity"
+            android:label="@string/title_activity_koloreak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.FamiliaActivity"
+            android:label="@string/title_activity_familia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.MenuContarcuentosActivity"
+            android:label="@string/title_activity_menu_contarcuentos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.ContarTxanoActivity"
+            android:label="@string/title_activity_contar_txano"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.ContarAhateActivity"
+            android:label="@string/title_activity_contar_ahate"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

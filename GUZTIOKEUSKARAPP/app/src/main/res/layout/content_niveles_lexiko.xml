@@ -30,7 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/segundonivel"
-            android:id="@+id/segundonivellexico" />
+            android:id="@+id/segundonivellexico"
+            android:onClick="segundonivellexiko"/>
 
         <Button
             android:layout_width="match_parent"

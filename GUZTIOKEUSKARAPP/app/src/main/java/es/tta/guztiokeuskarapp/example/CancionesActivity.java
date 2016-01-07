@@ -35,5 +35,11 @@ public class CancionesActivity extends AppCompatActivity {
 
     }
 
+    public void contarcuentos(View view){
+        Intent intent=new Intent(this,MenuContarcuentosActivity.class);
+        startActivity(intent);
+
+    }
+
 
 }

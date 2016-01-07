@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="es.tta.guztiokeuskarapp.example.LexikoSegundonivelActivity"
+    tools:showIn="@layout/activity_lexiko_segundonivel">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_gravity="right"
+            android:id="@+id/button15"
+            android:onClick="next"/>
+
+        <TextView
+            android:id="@+id/testlexikodos_wording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioGroup
+            android:id="@+id/test_choices_lex_dos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comprobar"
+            android:visibility="invisible"
+            android:id="@+id/button_comprobar"
+            android:onClick="send"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/niveleslexiko"
+            android:id="@+id/nivelexiko"
+            android:gravity="left"
+            android:onClick="niveleslexiko"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -40,4 +40,37 @@ public class LexikoActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void buttonetxeko(View view){
+        Intent intent=new Intent(this,EtxekoActivity.class);
+        startActivity(intent);
+
+
+    }
+
+    public void buttonadjektiboak(View view){
+        Intent intent=new Intent(this,AdjektiboakActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void buttonegunak(View view){
+        Intent intent=new Intent(this,EgunakActivity.class);
+        startActivity(intent);
+    }
+
+    public void buttonzenbakiak(View view){
+        Intent intent=new Intent(this,ZenbakiakActivity.class);
+        startActivity(intent);
+    }
+
+    public void buttonkoloreak (View view){
+        Intent intent=new Intent(this,KoloreakActivity.class);
+        startActivity(intent);
+    }
+
+    public void buttonfamilia(View view){
+        Intent intent=new Intent(this,FamiliaActivity.class);
+        startActivity(intent);
+    }
+
 }

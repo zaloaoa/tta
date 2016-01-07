@@ -12,15 +12,18 @@ import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.AbestiakPrimernivelActivity;
 import es.tta.guztiokeuskarapp.example.EjerciciosActivity;
 import es.tta.guztiokeuskarapp.example.presentation.DataAbestiakniveldos;
+import es.tta.guztiokeuskarapp.example.presentation.DataAbestiakniveltres;
 import es.tta.guztiokeuskarapp.example.presentation.DataAbestiakniveluno;
 
 public class NivelesAbestiakActivity extends AppCompatActivity {
 
     public final static String EXTRA_DATA_ABE_UNO ="es.tta.guztiokeuskarapp.dataabestiakniveluno";
     public final static String EXTRA_DATA_ABE_DOS ="es.tta.guztiokeuskarapp.dataabestiakniveldos";
+    public final static String EXTRA_DATA_ABE_TRES ="es.tta.guztiokeuskarapp.dataabestiakniveltres";
 
     private DataAbestiakniveluno dataAbestiakniveluno;
     private DataAbestiakniveldos dataAbestiakniveldos;
+    private DataAbestiakniveltres dataAbestiakniveltres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class NivelesAbestiakActivity extends AppCompatActivity {
 
         dataAbestiakniveluno=new DataAbestiakniveluno();
         dataAbestiakniveldos=new DataAbestiakniveldos();
+        dataAbestiakniveltres=new DataAbestiakniveltres();
     }
 
     public void ejercicios(View view){
@@ -63,5 +67,13 @@ public class NivelesAbestiakActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_DATA_ABE_DOS,dataAbestiakniveldos);
         startActivity(intent);
     }
+
+    public void tercernivelcanciones(View view){
+        Intent intent=new Intent(this,AbestiakTercernivelActivity.class);
+        intent.putExtra(EXTRA_DATA_ABE_TRES,dataAbestiakniveltres);
+        startActivity(intent);
+    }
+
+
 
 }

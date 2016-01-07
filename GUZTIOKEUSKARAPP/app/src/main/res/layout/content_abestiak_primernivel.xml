@@ -25,13 +25,9 @@
             android:layout_height="wrap_content"
             android:text="@string/next"
             android:id="@+id/next"
+            android:layout_gravity="right"
             android:onClick="next"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nivelescanciones"
-            android:id="@+id/nivelescanciones"
-            android:onClick="nivelescanciones"/>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -54,6 +50,14 @@
             android:visibility="invisible"
             android:id="@+id/button_comprobar"
             android:onClick="send"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nivelescanciones"
+            android:id="@+id/nivelescanciones"
+            android:gravity="left"
+            android:onClick="nivelescanciones"/>
 
 
     </LinearLayout>
