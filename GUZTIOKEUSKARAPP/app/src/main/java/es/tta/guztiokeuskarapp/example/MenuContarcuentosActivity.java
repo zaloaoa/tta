@@ -51,5 +51,10 @@ public class MenuContarcuentosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void contartxerri(View view){
+        Intent intent=new Intent(this, ContarHiruTxerriActivity.class);
+        startActivity(intent);
+    }
+
 
 }

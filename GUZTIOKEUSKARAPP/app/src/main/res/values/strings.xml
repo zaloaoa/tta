@@ -142,6 +142,7 @@
     <string name="zazpiantxume">Otsoa eta zazpi antxumeak</string>
     <string name="title_activity_contar_txano">ContarTxanoActivity</string>
     <string name="title_activity_contar_ahate">Ahate itsusia</string>
+    <string name="title_activity_contar_hiru_txerri">ContarHiruTxerriActivity</string>
 
 
 </resources>
