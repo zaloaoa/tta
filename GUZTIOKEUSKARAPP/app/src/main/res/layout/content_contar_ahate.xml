@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
-            android:id="@+id/next"
+            android:id="@+id/nextahate"
             android:onClick="next"
             android:textSize="10dp"/>
 
