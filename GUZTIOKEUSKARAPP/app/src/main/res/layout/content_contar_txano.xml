@@ -19,16 +19,29 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-        <ImageView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/contartxanogorri" />
+            android:text="@string/contarcuentos"
+            android:id="@+id/volvercontarcuentos"
+            android:onClick="volvercontarcuentos"
+            android:layout_gravity="left"
+            android:textSize="10dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
-            android:id="@+id/next"
-            android:onClick="next"/>
+            android:id="@+id/nexttxano"
+            android:onClick="next"
+            android:textSize="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:id="@+id/contartxanogorri"
+            />
     </LinearLayout>
 </RelativeLayout>
