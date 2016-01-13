@@ -147,6 +147,7 @@
     <string name="title_activity_ipuinak_segundonivel">IpuinakSegundonivelActivity</string>
     <string name="escuchar">ESCUCHAR</string>
     <string name="title_activity_ipuinak_niveluno">IpuinakNivelunoActivity</string>
+    <string name="title_activity_lexiko_primernivel">LexikoPrimernivelActivity</string>
 
 
 </resources>

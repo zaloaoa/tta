@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -121,6 +122,10 @@
         <activity
             android:name=".example.IpuinakNivelunoActivity"
             android:label="@string/title_activity_ipuinak_niveluno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.LexikoPrimernivelActivity"
+            android:label="@string/title_activity_lexiko_primernivel"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
