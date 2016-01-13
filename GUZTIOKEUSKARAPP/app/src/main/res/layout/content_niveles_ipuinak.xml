@@ -24,13 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/primernivel"
-            android:id="@+id/primernivelcuentos" />
+            android:id="@+id/primernivelcuentos"
+            android:onClick="primernivelcuentos"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/segundonivel"
-            android:id="@+id/segundonivelcuentos" />
+            android:id="@+id/segundonivelcuentos"
+            android:onClick="segundonivelcuentos"/>
 
         <Button
             android:layout_width="match_parent"
