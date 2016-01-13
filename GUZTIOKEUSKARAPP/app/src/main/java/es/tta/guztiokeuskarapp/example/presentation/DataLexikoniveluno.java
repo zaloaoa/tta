@@ -26,7 +26,7 @@ public class DataLexikoniveluno implements Serializable {
         choicesWording[2]="Umea ZAHARRA da";
         choicesCorrect[2]=false;
 
-        int Imagen0= R.drawable.ahateitsusia1;
+        int Imagen0= R.drawable.umea;
         testlexikoniveluno[0]=new Testlexikoniveluno("PREGUNTA 1:Relaciona la imagen con el personaje",Imagen0,choicesWording,choicesCorrect);
 
         //test segundo
@@ -38,8 +38,11 @@ public class DataLexikoniveluno implements Serializable {
         choicesWording[2]="Aulkia";
         choicesCorrect[2]=false;
 
-        int Imagen1= R.drawable.ahateitsusia2;
+        int Imagen1= R.drawable.ohea;
         testlexikoniveluno[1]=new Testlexikoniveluno("PREGUNTA 2:Relaciona la imagen con el personaje",Imagen1,choicesWording,choicesCorrect);
+
+        i = 0;
+        max = 4;
 
         //test tercero
         choicesWording[0]="Igandea";
@@ -49,8 +52,8 @@ public class DataLexikoniveluno implements Serializable {
         choicesWording[2]="Asteazkena";
         choicesCorrect[2]=true;
 
-        int Imagen2= R.drawable.ahateitsusia3;
-        testlexikoniveluno[2]=new Testlexikoniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen2,choicesWording,choicesCorrect);
+        int Imagen2= R.drawable.miercoles;
+        testlexikoniveluno[2]=new Testlexikoniveluno("PREGUNTA 3:Relaciona la imagen con el personaje",Imagen2,choicesWording,choicesCorrect);
 
         //test cuarto
 
@@ -61,8 +64,8 @@ public class DataLexikoniveluno implements Serializable {
         choicesWording[2]="Arbela";
         choicesCorrect[2]=false;
 
-        int Imagen3= R.drawable.ahateitsusia3;
-        testlexikoniveluno[3]=new Testlexikoniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen3,choicesWording,choicesCorrect);
+        int Imagen3= R.drawable.arkatza;
+        testlexikoniveluno[3]=new Testlexikoniveluno("PREGUNTA 4:Relaciona la imagen con el personaje",Imagen3,choicesWording,choicesCorrect);
     }
 
     public Testlexikoniveluno getTest(){
