@@ -149,6 +149,7 @@
     <string name="title_activity_ipuinak_niveluno">IpuinakNivelunoActivity</string>
     <string name="title_activity_lexiko_primernivel">LexikoPrimernivelActivity</string>
     <string name="title_activity_lexiko_tercernivel">LexikoTercernivelActivity</string>
-
-
+    <string name="title_activity_menu_ver_cuentos">MenuVerCuentosActivity</string>
+    <string name="title_activity_ver_txano">VerTxanoActivity</string>
+    <string name="ver_videotxano">VER VIDEO</string>
 </resources>

@@ -40,4 +40,10 @@ public class CuentosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void vercuentos (View view)
+    {
+        Intent intent=new Intent(this,MenuVerCuentosActivity.class);
+        startActivity(intent);
+    }
+
 }
