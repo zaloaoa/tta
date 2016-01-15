@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/primernivel"
-            android:id="@+id/primernivellexico" />
+            android:id="@+id/primernivellexico"
+            android:onClick="primernivellexiko"/>
 
         <Button
             android:layout_width="match_parent"
