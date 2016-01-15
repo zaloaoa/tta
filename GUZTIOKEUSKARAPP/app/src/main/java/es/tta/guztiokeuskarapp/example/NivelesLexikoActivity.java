@@ -11,15 +11,18 @@ import android.view.View;
 import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.EjerciciosActivity;
 import es.tta.guztiokeuskarapp.example.presentation.DataLexikoniveldos;
+import es.tta.guztiokeuskarapp.example.presentation.DataLexikoniveltres;
 import es.tta.guztiokeuskarapp.example.presentation.DataLexikoniveluno;
 
 public class NivelesLexikoActivity extends AppCompatActivity {
 
     public final static String EXTRA_DATA_LEX_UNO ="es.tta.guztiokeuskarapp.datalexikoniveluno";
     public final static String EXTRA_DATA_LEX_DOS ="es.tta.guztiokeuskarapp.datalexikoniveldos";
+    public final static String EXTRA_DATA_LEX_TRES ="es.tta.guztiokeuskarapp.datalexikoniveltres";
 
     private DataLexikoniveldos dataLexikoniveldos;
     private DataLexikoniveluno dataLexikoniveluno;
+    private DataLexikoniveltres dataLexikoniveltres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class NivelesLexikoActivity extends AppCompatActivity {
 
         dataLexikoniveldos=new DataLexikoniveldos();
         dataLexikoniveluno=new DataLexikoniveluno();
+        dataLexikoniveltres=new DataLexikoniveltres();
     }
     public void ejercicios(View view){
 
@@ -57,6 +61,13 @@ public class NivelesLexikoActivity extends AppCompatActivity {
         Intent intent=new Intent(this, LexikoSegundonivelActivity.class);
         intent.putExtra(EXTRA_DATA_LEX_DOS,dataLexikoniveldos);
         startActivity(intent);
+    }
+
+    public void tercernivellexiko(View view){
+        Intent intent=new Intent(this,LexikoTercernivelActivity.class);
+        intent.putExtra(EXTRA_DATA_LEX_TRES,dataLexikoniveltres);
+        startActivity(intent);
+
     }
 
 
