@@ -139,8 +139,7 @@
     <string name="title_activity_menu_contarcuentos">GUZTIOKEUSKARAPP</string>
     <string name="txanogorritxo">Txangorritxo</string>
     <string name="ahate">Ahate itsusia</string>
-    <string name="hirutxerri">Hiru txerikumeak</string>
-    <string name="zazpiantxume">Otsoa eta zazpi antxumeak</string>
+    <string name="hirutxerri">Hiru txerrikumeak</string>
     <string name="title_activity_contar_txano">ContarTxanoActivity</string>
     <string name="title_activity_contar_ahate">Ahate itsusia</string>
     <string name="title_activity_contar_hiru_txerri">ContarHiruTxerriActivity</string>
