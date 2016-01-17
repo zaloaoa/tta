@@ -27,7 +27,7 @@ public class DataIpuinakniveluno implements Serializable {
         choicesWording[2]="Itsusia deitzen zioten animaliak";
         choicesCorrect[2]=false;
 
-        int Imagen0= R.drawable.ahateitsusia1;
+        int Imagen0= R.drawable.ahateitsusi;
         test[0]=new TestIpuinakniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen0,choicesWording,choicesCorrect);
 
         //test segundo
@@ -38,7 +38,7 @@ public class DataIpuinakniveluno implements Serializable {
         choicesWording[2]="Otsoa";
         choicesCorrect[2]=false;
 
-        int Imagen1= R.drawable.ahateitsusia2;
+        int Imagen1= R.drawable.aizkolari;
         test[1]=new TestIpuinakniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen1,choicesWording,choicesCorrect);
 
         //test tercero
@@ -49,7 +49,7 @@ public class DataIpuinakniveluno implements Serializable {
         choicesWording[2]="Txerrikume txikia";
         choicesCorrect[2]=true;
 
-        int Imagen2= R.drawable.ahateitsusia3;
+        int Imagen2= R.drawable.txerrikumetxikia;
         test[2]=new TestIpuinakniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen2,choicesWording,choicesCorrect);
 
          i=0;
