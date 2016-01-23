@@ -40,6 +40,11 @@ public class CancionesActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void verpintto(View view)
+    {
+        Intent intent=new Intent(this,VerPinttoActivity.class);
+        startActivity(intent);
+    }
 
 
 }

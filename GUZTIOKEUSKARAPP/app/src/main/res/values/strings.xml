@@ -153,4 +153,5 @@
     <string name="ver_videotxano">VER VIDEO</string>
     <string name="title_activity_ver_hiru">VerHiruActivity</string>
     <string name="title_activity_ver_ahate">VerAhateActivity</string>
+    <string name="title_activity_ver_pintto">VerPinttoActivity</string>
 </resources>
