@@ -34,6 +34,11 @@ public class MenuVerCuentosActivity extends AppCompatActivity {
         Intent intent=new Intent(this,VerHiruActivity.class);
         startActivity(intent);
     }
+    public void verahate(View view)
+    {
+        Intent intent=new Intent(this,VerAhateActivity.class);
+        startActivity(intent);
+    }
 
 }
 

@@ -142,6 +142,10 @@
         <activity
             android:name=".example.VerHiruActivity"
             android:label="@string/title_activity_ver_hiru"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.VerAhateActivity"
+            android:label="@string/title_activity_ver_ahate"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
