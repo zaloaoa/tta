@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
+import es.tta.guztiokeuskarapp.example.model.VerRiki;
 
 public class CancionesActivity extends AppCompatActivity {
 
@@ -43,6 +44,12 @@ public class CancionesActivity extends AppCompatActivity {
     public void verpintto(View view)
     {
         Intent intent=new Intent(this,VerPinttoActivity.class);
+        startActivity(intent);
+    }
+
+    public void verxalala(View view)
+    {
+        Intent intent=new Intent(this, VerRikiActivity.class);
         startActivity(intent);
     }
 
