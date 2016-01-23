@@ -29,16 +29,11 @@ public class MenuVerCuentosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void verahate (View view)
+    public void vertxerri(View view)
     {
-        Intent intent=new Intent(this, ContarAhateActivity.class);
+        Intent intent=new Intent(this,VerHiruActivity.class);
         startActivity(intent);
     }
-
-    public void vertxerri(View view){
-        Intent intent=new Intent(this, ContarHiruTxerriActivity.class);
-        startActivity(intent);
-    }*/
 
 }
 

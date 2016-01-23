@@ -130,7 +130,7 @@
         <activity
             android:name=".example.LexikoTercernivelActivity"
             android:label="@string/title_activity_lexiko_tercernivel"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".example.MenuVerCuentosActivity"
             android:label="@string/title_activity_menu_ver_cuentos"
@@ -138,6 +138,10 @@
         <activity
             android:name=".example.VerTxanoActivity"
             android:label="@string/title_activity_ver_txano"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.VerHiruActivity"
+            android:label="@string/title_activity_ver_hiru"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

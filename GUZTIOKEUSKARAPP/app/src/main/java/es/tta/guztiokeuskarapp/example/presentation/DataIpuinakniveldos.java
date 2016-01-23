@@ -15,7 +15,7 @@ public class DataIpuinakniveldos implements Serializable {
 
     public  DataIpuinakniveldos(){
         test=new TestIpuinakniveldos[3];
-        String audio0="http://51.254.221.215/uploads/pr.ogg";
+        String audio0="http://51.254.221.215/uploads/aizkolaria.mp3";
         test[0]=new TestIpuinakniveldos("Lee en voz alta la palabra y escucha su pronunciación correcta: AIZKOLARIA",audio0);
         String audio1="http://51.254.221.215/uploads/pr.ogg";
         test[1]=new TestIpuinakniveldos("Lee en voz alta la palabra y escucha su pronunciación correcta: HIRU TXERRIKUMEAK",audio1);

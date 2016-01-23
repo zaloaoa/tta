@@ -151,4 +151,5 @@
     <string name="title_activity_menu_ver_cuentos">MenuVerCuentosActivity</string>
     <string name="title_activity_ver_txano">VerTxanoActivity</string>
     <string name="ver_videotxano">VER VIDEO</string>
+    <string name="title_activity_ver_hiru">VerHiruActivity</string>
 </resources>

@@ -11,7 +11,7 @@ public class DataVerCuentoTxanogorritxo {
     public DataVerCuentoTxanogorritxo()
     {
         String enunciado="Cuento de Caperucita Roja/Txanogorritxo ipuina";
-        String video="http://51.254.221.215/uploads/subir.mp4";
+        String video="http://51.254.221.215/uploads/txanogorritxu.mp4";
         cuentoTxanogorritxo=new VerCuentoTxanogorritxo(enunciado,video);
     }
     public VerCuentoTxanogorritxo getCuentoTxanogorritxo()
