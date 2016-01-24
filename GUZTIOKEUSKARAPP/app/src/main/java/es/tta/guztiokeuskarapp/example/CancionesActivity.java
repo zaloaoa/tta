@@ -58,6 +58,11 @@ public class CancionesActivity extends AppCompatActivity {
         Intent intent=new Intent(this,VerParistikActivity.class);
         startActivity(intent);
     }
+    public void verikusi(View view)
+    {
+        Intent intent=new Intent(this,VerIkusiActivity.class);
+        startActivity(intent);
+    }
 
 
 }
