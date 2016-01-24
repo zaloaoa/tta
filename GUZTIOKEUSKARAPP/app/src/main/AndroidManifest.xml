@@ -154,6 +154,10 @@
         <activity
             android:name=".example.VerRikiActivity"
             android:label="@string/title_activity_ver_riki"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.IpuinakTercernivelActivity"
+            android:label="@string/title_activity_ipuinak_tercernivel"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

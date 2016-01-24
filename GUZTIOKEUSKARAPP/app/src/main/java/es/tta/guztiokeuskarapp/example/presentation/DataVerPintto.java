@@ -13,7 +13,7 @@ public class DataVerPintto {
     public DataVerPintto()
     {
         String enunciado="Pintto Pintto";
-        String video="http://51.254.221.215/uploads/pinttopintto.mp4";
+        String video="http://51.254.221.215/uploads/pintto.mp4";
         pintto=new VerPintto(enunciado,video);
     }
     public VerPintto getPintto() {

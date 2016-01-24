@@ -14,7 +14,7 @@ public class DataVerRiki {
     public DataVerRiki()
     {
         String enunciado="Riki riki";
-        String video="http://51.254.221.215/uploads/rikiriki.mp4";
+        String video="http://51.254.221.215/uploads/xalala.mp4";
         riki=new VerRiki(enunciado,video);
     }
 

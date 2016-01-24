@@ -155,4 +155,5 @@
     <string name="title_activity_ver_ahate">VerAhateActivity</string>
     <string name="title_activity_ver_pintto">VerPinttoActivity</string>
     <string name="title_activity_ver_riki">VerRikiActivity</string>
+    <string name="title_activity_ipuinak_tercernivel">IpuinakTercernivelActivity</string>
 </resources>

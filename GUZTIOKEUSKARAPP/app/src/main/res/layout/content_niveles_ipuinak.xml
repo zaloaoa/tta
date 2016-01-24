@@ -38,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tercernivel"
-            android:id="@+id/tercernivelcuentos" />
+            android:id="@+id/tercernivelcuentos"
+            android:onClick="tercernivelcuentos"/>
 
         <Button
             android:layout_width="wrap_content"

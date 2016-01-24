@@ -11,15 +11,19 @@ import android.view.View;
 import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.EjerciciosActivity;
 import es.tta.guztiokeuskarapp.example.presentation.DataIpuinakniveldos;
+import es.tta.guztiokeuskarapp.example.presentation.DataIpuinakniveltres;
 import es.tta.guztiokeuskarapp.example.presentation.DataIpuinakniveluno;
 
 public class NivelesIpuinakActivity extends AppCompatActivity {
 
     public final static String EXTRA_DATA_IP_DOS ="es.tta.guztiokeuskarapp.dataipuinakniveldos";
     public final static String EXTRA_DATA_IP_UNO ="es.tta.guztiokeuskarapp.dataipuinakniveluno";
+    public final static String EXTRA_DATA_IP_TRES ="es.tta.guztiokeuskarapp.dataipuinakniveltres";
+
 
     private DataIpuinakniveluno dataIpuinakniveluno;
     private DataIpuinakniveldos dataIpuinakniveldos;
+    private DataIpuinakniveltres dataIpuinakniveltres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,7 @@ public class NivelesIpuinakActivity extends AppCompatActivity {
 
         dataIpuinakniveldos=new DataIpuinakniveldos();
         dataIpuinakniveluno=new DataIpuinakniveluno();
+        dataIpuinakniveltres=new DataIpuinakniveltres();
     }
     public void ejercicios(View view){
 
@@ -57,6 +62,12 @@ public class NivelesIpuinakActivity extends AppCompatActivity {
     public void primernivelcuentos(View view){
         Intent intent=new Intent(this,IpuinakNivelunoActivity.class);
         intent.putExtra(EXTRA_DATA_IP_UNO,dataIpuinakniveluno);
+        startActivity(intent);
+    }
+
+    public void tercernivelcuentos(View view){
+        Intent intent=new Intent(this,IpuinakTercernivelActivity.class);
+        intent.putExtra(EXTRA_DATA_IP_TRES,dataIpuinakniveltres);
         startActivity(intent);
     }
 
