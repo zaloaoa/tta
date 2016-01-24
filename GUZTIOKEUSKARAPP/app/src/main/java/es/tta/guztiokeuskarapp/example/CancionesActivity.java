@@ -53,5 +53,11 @@ public class CancionesActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void verparis(View view)
+    {
+        Intent intent=new Intent(this,VerParistikActivity.class);
+        startActivity(intent);
+    }
+
 
 }
