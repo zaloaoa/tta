@@ -37,7 +37,7 @@ public class IpuinakSegundonivelActivity extends AppCompatActivity  {
         textWording.setText(testIpuinakniveldos.getWording());
         audioo=testIpuinakniveldos.getAudio();
         layout = (LinearLayout) findViewById(R.id.testipuinakdos);//lo pone abajo
-        Toast.makeText(getApplicationContext(),audioo, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(),audioo, Toast.LENGTH_SHORT).show();
 
     }
 

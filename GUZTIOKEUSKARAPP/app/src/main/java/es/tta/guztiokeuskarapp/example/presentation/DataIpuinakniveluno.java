@@ -16,7 +16,7 @@ public class DataIpuinakniveluno implements Serializable {
     TestIpuinakniveluno [] test;
 
     public DataIpuinakniveluno(){
-        test=new TestIpuinakniveluno[3];
+        test=new TestIpuinakniveluno[4];
         String[] choicesWording = new String[3];//3 opciones
         boolean[] choicesCorrect = new boolean[3];
         //test primero
@@ -52,8 +52,18 @@ public class DataIpuinakniveluno implements Serializable {
         int Imagen2= R.drawable.txerrikumetxikia;
         test[2]=new TestIpuinakniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen2,choicesWording,choicesCorrect);
 
+        //test cuarto
+        choicesWording[0]="Zisneak";
+        choicesCorrect[0]=false;
+        choicesWording[1]="Itsusia deitzen zioten animaliak";
+        choicesCorrect[1]=true;
+        choicesWording[2]="Ahate itsusia";
+        choicesCorrect[2]=false;
+
+        int Imagen3= R.drawable.animaliak;
+        test[3]=new TestIpuinakniveluno("Erlaziona ezazu irudia pertsonaiarekin/Relaciona la imagen con el personaje",Imagen3,choicesWording,choicesCorrect);
          i=0;
-        max=3;
+        max=4;
 
     }
 

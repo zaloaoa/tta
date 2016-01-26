@@ -37,7 +37,7 @@ public class LexikoTercernivelActivity extends AppCompatActivity {
         textWording.setText(testLexikoniveltres.getWording());
         audioo = testLexikoniveltres.getAudio();
         layout = (LinearLayout) findViewById(R.id.testlextres);
-        Toast.makeText(getApplicationContext(), audioo, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), audioo, Toast.LENGTH_SHORT).show();
 
 
     }

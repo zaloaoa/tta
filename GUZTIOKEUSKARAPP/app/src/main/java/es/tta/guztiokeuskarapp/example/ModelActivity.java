@@ -14,7 +14,7 @@ import es.tta.guztiokeuskarapp.example.presentation.Data;
 import es.tta.guztiokeuskarapp.example.prof.comms.RestClient;
 
 public class ModelActivity extends AppCompatActivity {
-    public static final String URL="http://u017633.ehu.eus:18080/Servidor/carpeta";
+    public static final String URL="http://u017633.ehu.eus:18080/Guztiok/carpeta";
     protected RestClient rest;
     protected Business server;
     protected Data data;
