@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import es.tta.guztiokeuskarapp.example.model.Itzulpen;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
 
 /**
@@ -14,6 +15,7 @@ import es.tta.guztiokeuskarapp.example.model.Traduccion;
  */
 public class Data {
     private final static String EXTRA_TRADUCCION="es.tta.guztiokeuskarapp.traduccion";
+    private final static String EXTRA_ITZULPEN="es.tta.guztiokeuskarapp.itzulpen";
     private final Bundle bundle;
 
     public Data(Bundle bundle) {
@@ -52,6 +54,29 @@ public class Data {
         }
 
     }
+    public Itzulpen getItzulpen(){
+
+        try {
+            Itzulpen itzulpen=new Itzulpen();
+            JSONObject json=new JSONObject(bundle.getString(EXTRA_ITZULPEN));
+            JSONArray array= json.getJSONArray("tablaeskola");
+            for(int i=0; i<array.length();i++) {
+                JSONObject item= array.getJSONObject(i);
+                Itzulpen.Eskola eskola=new Itzulpen.Eskola();
+                eskola.setPalabraCastellano(item.getString("palabraCastellano"));
+                eskola.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                itzulpen.getEskolak().add(eskola);
+            }
+            Log.e("guztiok", "entra en data en getItzulpen"+itzulpen.toString());
+            return itzulpen;
+
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+
+    }
 
     public void putTraduccion(Traduccion traduccion){
         try {
@@ -66,6 +91,27 @@ public class Data {
             json.put("tablatraduccion",array);
             bundle.putString(EXTRA_TRADUCCION, json.toString());//propagar
             Log.e("guztiok", "entra en data putTraduccion"+json.toString());
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void putItzulpen(Itzulpen itzulpen){
+        try {
+            JSONObject json = new JSONObject();
+            JSONArray array = new JSONArray();
+            for(Itzulpen.Eskola eskolak : itzulpen.getEskolak()){
+                JSONObject item = new JSONObject();
+                item.put("palabraCastellano",eskolak.getPalabraCastellano());
+                item.put("tablaTraduccioncol",eskolak.getTablaTraduccioncol());
+                array.put(item);
+            }
+            json.put("tablaeskola",array);
+            bundle.putString(EXTRA_ITZULPEN, json.toString());
+            Log.e("guztiok", "entra en data putItzulpen"+json.toString());
 
         }catch (JSONException e){
             e.printStackTrace();

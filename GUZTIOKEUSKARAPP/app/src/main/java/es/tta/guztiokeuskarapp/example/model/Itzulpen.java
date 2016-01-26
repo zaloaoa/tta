@@ -3,30 +3,33 @@ package es.tta.guztiokeuskarapp.example.model;
 import java.util.ArrayList;
 
 /**
- * Created by Usuario on 24/01/2016.
+ * Created by Usuario on 26/01/2016.
  */
-public class Traduccion {
+public class Itzulpen {
 
-    private ArrayList agurrak=new ArrayList<Agurrak>();
-    public Traduccion(){
 
-    }
-    public ArrayList<Agurrak> getAgurrak() {
+    private ArrayList eskolak=new ArrayList<Eskola>();
 
-        return agurrak;
-    }
-    public Agurrak getAgurra(int i){
-
-        return (Agurrak) agurrak.get(i);
+    public ArrayList<Eskola> getEskolak() {
+        return eskolak;
     }
 
+    public Eskola getEskola(int i)
+    {
+        return (Eskola)eskolak.get(i);
+    }
 
-    public static class Agurrak{
+    public Itzulpen()
+    {
 
+    }
+    public static class Eskola
+    {
         private String palabraCastellano;
         private String tablaTraduccioncol;
 
-        public Agurrak(){
+        public Eskola()
+        {
 
         }
         public String getPalabraCastellano() {
@@ -36,6 +39,7 @@ public class Traduccion {
         public String getTablaTraduccioncol() {
             return tablaTraduccioncol;
         }
+
         public void setPalabraCastellano(String palabraCastellano) {
             this.palabraCastellano = palabraCastellano;
         }
@@ -45,7 +49,6 @@ public class Traduccion {
         }
 
 
-}
 
-
+    }
 }

@@ -38,5 +38,25 @@ public class Business {
             return null;
         }
     }
+    public Itzulpen getItzulpen(String a)throws IOException,JSONException{
+        try{
+            Itzulpen itzulpen=new Itzulpen();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablaeskola");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Itzulpen.Eskola eskola=new Itzulpen.Eskola();
+                eskola.setPalabraCastellano(item.getString("palabraCastellano"));
+                eskola.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                itzulpen.getEskolak().add(eskola);
+                Log.e("guztiok", "entra en business en getItzulpen");
+            }
+            return itzulpen;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
 
 }
