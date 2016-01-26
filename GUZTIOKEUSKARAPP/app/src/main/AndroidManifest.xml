@@ -166,6 +166,14 @@
         <activity
             android:name=".example.VerIkusiActivity"
             android:label="@string/title_activity_ver_ikusi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.ModelActivity"
+            android:label="@string/title_activity_model"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".example.AgurrakActivity"
+            android:label="@string/title_activity_agurrak"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

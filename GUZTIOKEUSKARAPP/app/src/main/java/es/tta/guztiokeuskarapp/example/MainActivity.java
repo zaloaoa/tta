@@ -1,7 +1,9 @@
 package es.tta.guztiokeuskarapp.example;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +17,7 @@ import android.widget.ImageView;
 import es.tta.guztiokeuskarapp.R;
 
 public class MainActivity extends AppCompatActivity {
+    private NetworkReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //BroadcastReceiver to track network connection changes.
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        receiver = new NetworkReceiver ();
+        this.registerReceiver(receiver, filter);
     }
 
     @Override
@@ -64,4 +72,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        if(receiver!= null){
+            this.unregisterReceiver(receiver);
+        }
+    }
+
+
+
 }

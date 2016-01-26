@@ -19,6 +19,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lexiko"
+            android:id="@+id/button11"
+            android:onClick="volverlexiko"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,12 +81,7 @@
             />
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lexiko"
-            android:id="@+id/button11"
-            android:onClick="volverlexiko"/>
+
 
 
     </LinearLayout>

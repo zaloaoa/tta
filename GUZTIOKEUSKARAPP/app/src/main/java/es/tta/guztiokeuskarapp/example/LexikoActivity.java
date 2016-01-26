@@ -6,27 +6,20 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
+import es.tta.guztiokeuskarapp.example.model.Traduccion;
+import es.tta.guztiokeuskarapp.example.prof.views.ProgressTask;
 
-public class LexikoActivity extends AppCompatActivity {
+public class LexikoActivity extends ModelActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lexiko);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     public void menuprincipal(View view){
@@ -71,6 +64,30 @@ public class LexikoActivity extends AppCompatActivity {
     public void buttonfamilia(View view){
         Intent intent=new Intent(this,FamiliaActivity.class);
         startActivity(intent);
+    }
+
+    public void buttonagurrak(View View){
+        new ProgressTask<Traduccion>(this){
+
+
+            @Override
+            protected Traduccion work() throws Exception {
+
+                String a="requestTraduccion.json";
+                Log.e("guztiok", "entra en lexikoactivity en work");
+                return server.getTraduccion(a);
+            }
+
+            @Override
+            protected void onFinish(Traduccion result) {
+
+                data.putTraduccion(result);
+                Log.e("guztiok", "entra en lexikoactivity en onfinish");
+                startModelActivity(AgurrakActivity.class);//La actividad de Agurrak
+
+            }
+        }.execute();
+
     }
 
 }

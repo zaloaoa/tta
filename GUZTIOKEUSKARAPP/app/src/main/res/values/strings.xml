@@ -158,4 +158,6 @@
     <string name="title_activity_ipuinak_tercernivel">IpuinakTercernivelActivity</string>
     <string name="title_activity_ver_paristik">VerParistikActivity</string>
     <string name="title_activity_ver_ikusi">VerIkusiActivity</string>
+    <string name="title_activity_model">ModelActivity</string>
+    <string name="title_activity_agurrak">GUZTIOKEUSKARAPP</string>
 </resources>
