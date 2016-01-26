@@ -29,7 +29,8 @@ public class IpuinakSegundonivelActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ipuinak_segundonivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data=(DataIpuinakniveldos)intent.getSerializableExtra(NivelesIpuinakActivity.EXTRA_DATA_IP_DOS);
         TestIpuinakniveldos testIpuinakniveldos=data.getTest();

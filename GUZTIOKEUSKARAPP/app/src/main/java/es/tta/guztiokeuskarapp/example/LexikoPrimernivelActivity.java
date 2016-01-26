@@ -29,6 +29,8 @@ public class LexikoPrimernivelActivity extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lexiko_primernivel);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent = getIntent();
         dataLexikoniveluno = (DataLexikoniveluno) intent.getSerializableExtra(NivelesLexikoActivity.EXTRA_DATA_LEX_UNO);
         Testlexikoniveluno testlexikoniveluno=dataLexikoniveluno.getTest();

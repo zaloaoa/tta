@@ -29,6 +29,8 @@ public class VerRikiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_riki);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);//
+        setSupportActionBar(toolbar);//
         riki=new DataVerRiki();
         VerRiki cancionriki=riki.getRiki();
         TextView textWording=(TextView)findViewById(R.id.ikusiriki);

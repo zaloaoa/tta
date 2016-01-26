@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
@@ -24,7 +25,8 @@ public class AbestiakPrimernivelActivity extends AppCompatActivity implements Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abestiak_primernivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data = (DataAbestiakniveluno) intent.getSerializableExtra(NivelesAbestiakActivity.EXTRA_DATA_ABE_UNO);//data=dataabestiakniveluno
         TestAbestiakniveluno test=data.getTest();//cogemos el test, uno cada vez

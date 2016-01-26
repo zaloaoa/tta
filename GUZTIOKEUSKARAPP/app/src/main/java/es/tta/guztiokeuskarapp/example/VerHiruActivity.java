@@ -33,6 +33,8 @@ public class VerHiruActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_hiru);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         verhiru=new DataVerCuentoHiru();
         VerCuentoHiru cuentohiru=verhiru.getCuentoHiru();//consigo el cuento
         TextView textWording=(TextView)findViewById(R.id.ikusitxerri);

@@ -30,6 +30,8 @@ public class VerParistikActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_paristik);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         verparistik=new DataVerParistik();
         VerParistik cancionparistik=verparistik.getParistik();
         TextView textWording=(TextView)findViewById(R.id.ikusiparistik);

@@ -29,7 +29,8 @@ public class LexikoTercernivelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lexiko_tercernivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent = getIntent();
         dataLexikoniveltres = (DataLexikoniveltres) intent.getSerializableExtra(NivelesLexikoActivity.EXTRA_DATA_LEX_TRES);
         TestLexikoniveltres testLexikoniveltres = dataLexikoniveltres.getTestLexikoniveltres();

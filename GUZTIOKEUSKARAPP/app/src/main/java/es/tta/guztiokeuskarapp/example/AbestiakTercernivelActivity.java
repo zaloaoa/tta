@@ -25,6 +25,8 @@ public class AbestiakTercernivelActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abestiak_tercernivel);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data=(DataAbestiakniveltres)intent.getSerializableExtra(NivelesAbestiakActivity.EXTRA_DATA_ABE_TRES);//data=dataAbestiakniveltres
         TestAbestiakniveltres test=data.getTest();

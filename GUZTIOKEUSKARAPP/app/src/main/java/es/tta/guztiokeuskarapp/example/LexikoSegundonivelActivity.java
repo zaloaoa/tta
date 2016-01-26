@@ -27,7 +27,8 @@ public class LexikoSegundonivelActivity extends AppCompatActivity implements Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lexiko_segundonivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data=(DataLexikoniveldos)intent.getSerializableExtra(NivelesLexikoActivity.EXTRA_DATA_LEX_DOS);
         TestLexikoniveldos test=data.getTest();

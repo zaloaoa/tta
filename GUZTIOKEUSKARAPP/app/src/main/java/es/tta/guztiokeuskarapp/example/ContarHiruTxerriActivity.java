@@ -32,6 +32,8 @@ public class ContarHiruTxerriActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contar_hiru_txerri);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         ImageView imageView=(ImageView)findViewById(R.id.contarhirutxerri);
 

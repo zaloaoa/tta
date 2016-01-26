@@ -29,7 +29,8 @@ public class IpuinakTercernivelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ipuinak_tercernivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data=(DataIpuinakniveltres)intent.getSerializableExtra(NivelesIpuinakActivity.EXTRA_DATA_IP_TRES);
         TestIpuinakniveltres testIpuinakniveltres=data.getTest();

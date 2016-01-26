@@ -26,6 +26,8 @@ public class AgurrakActivity extends ModelActivity {
         Log.e("guztiok", "entra en AgurrakActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agurrak);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         traduccion=data.getTraduccion();
         Log.e("guztiok","la lista es:"+traduccion.getAgurra(0).getPalabraCastellano().toString());///añadido lo ultimo
         Log.e("guztiok", "la lista es:" + traduccion.getAgurra(11).getPalabraCastellano().toString());

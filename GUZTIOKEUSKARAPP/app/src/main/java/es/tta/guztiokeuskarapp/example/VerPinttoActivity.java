@@ -29,6 +29,8 @@ public class VerPinttoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_pintto);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         verpintto=new DataVerPintto();
         VerPintto cancionpintto=verpintto.getPintto();//consigo el cuento
         TextView textWording=(TextView)findViewById(R.id.ikusipintto);

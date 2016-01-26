@@ -28,6 +28,8 @@ public class IpuinakNivelunoActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ipuinak_niveluno);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent=getIntent();
         data=(DataIpuinakniveluno)intent.getSerializableExtra(NivelesIpuinakActivity.EXTRA_DATA_IP_UNO);
         TestIpuinakniveluno test=data.getTest();

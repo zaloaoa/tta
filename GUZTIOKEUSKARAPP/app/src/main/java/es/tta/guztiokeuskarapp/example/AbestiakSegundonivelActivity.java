@@ -27,7 +27,8 @@ public class AbestiakSegundonivelActivity extends AppCompatActivity implements V
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abestiak_segundonivel);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Intent intent=getIntent();
         data=(DataAbestiakniveldos)intent.getSerializableExtra(NivelesAbestiakActivity.EXTRA_DATA_ABE_DOS);

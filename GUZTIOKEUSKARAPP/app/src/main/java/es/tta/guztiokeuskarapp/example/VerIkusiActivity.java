@@ -30,6 +30,8 @@ public class VerIkusiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_ikusi);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);//
+        setSupportActionBar(toolbar);//
         verikusi=new DataVerIkusi();
         VerIkusi cancionikusi=verikusi.getIkusi();
         TextView textWording=(TextView)findViewById(R.id.ikusiikusi);

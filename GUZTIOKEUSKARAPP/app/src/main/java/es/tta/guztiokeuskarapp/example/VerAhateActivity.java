@@ -30,6 +30,8 @@ public class VerAhateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_ahate);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         verahate=new DataVerCuentoAhate();
         VerCuentoAhate cuentoahate=verahate.getCuentoAhate();//consigo el cuento
         TextView textWording=(TextView)findViewById(R.id.ikusipatito);

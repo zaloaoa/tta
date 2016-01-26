@@ -33,6 +33,8 @@ public class VerTxanoActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_txano);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         vertxano=new DataVerCuentoTxanogorritxo();
         VerCuentoTxanogorritxo cuentotxano=vertxano.getCuentoTxanogorritxo();//consigo el cuento
         TextView textWording=(TextView)findViewById(R.id.ikusitxano);
