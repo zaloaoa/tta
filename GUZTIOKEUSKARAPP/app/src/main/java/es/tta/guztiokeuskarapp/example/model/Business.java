@@ -79,5 +79,25 @@ public class Business {
             return null;
         }
     }
+    public Ajetivo getAjetivo(String a)throws IOException,JSONException{
+        try{
+            Ajetivo ajetivo=new Ajetivo();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablaadjetivo");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Ajetivo.Adjektiboak adj=new Ajetivo.Adjektiboak();
+                adj.setPalabraCastellano(item.getString("palabraCastellano"));
+                adj.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                ajetivo.getAdjektiboak().add(adj);
+
+            }
+            return ajetivo;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
 
 }

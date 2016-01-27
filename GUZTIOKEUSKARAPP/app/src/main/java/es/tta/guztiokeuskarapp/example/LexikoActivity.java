@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
+import es.tta.guztiokeuskarapp.example.model.Ajetivo;
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
 import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
@@ -78,8 +79,24 @@ public class LexikoActivity extends ModelActivity {
     }
 
     public void buttonadjektiboak(View view){
-        Intent intent=new Intent(this,AdjektiboakActivity.class);
-        startActivity(intent);
+        new ProgressTask<Ajetivo>(this){
+
+
+            @Override
+            protected Ajetivo work() throws Exception {
+
+                String a="requestAdjetivo.json";
+                return server.getAjetivo(a);
+            }
+
+            @Override
+            protected void onFinish(Ajetivo result) {
+
+                data.putAjetivo(result);
+                startModelActivity(AdjektiboakActivity.class);
+
+            }
+        }.execute();
 
     }
 
