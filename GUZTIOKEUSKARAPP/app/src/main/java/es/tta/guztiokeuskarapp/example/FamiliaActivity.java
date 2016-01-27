@@ -7,10 +7,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import es.tta.guztiokeuskarapp.R;
+import es.tta.guztiokeuskarapp.example.model.Familia;
 
-public class FamiliaActivity extends AppCompatActivity {
+
+public class FamiliaActivity extends ModelActivity {
+    private Familia familia;
+    private LinearLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +24,15 @@ public class FamiliaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_familia);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        familia=data.getFamilia();
+        for(Familia.Familiak fam:familia.getFamiliak()){
+            layout=(LinearLayout)findViewById(R.id.fam);
+            TextView textView=new TextView(this);
+            String a=fam.getPalabraCastellano();
+            String b=fam.getTablaTraduccioncol();
+            textView.setText(a+":"+b);
+            layout.addView(textView);
+        }
 
 
     }

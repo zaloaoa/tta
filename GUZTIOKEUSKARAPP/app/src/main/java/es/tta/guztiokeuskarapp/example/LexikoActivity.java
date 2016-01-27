@@ -11,6 +11,7 @@ import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.model.Ajetivo;
+import es.tta.guztiokeuskarapp.example.model.Familia;
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
 import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
@@ -116,8 +117,24 @@ public class LexikoActivity extends ModelActivity {
     }
 
     public void buttonfamilia(View view){
-        Intent intent=new Intent(this,FamiliaActivity.class);
-        startActivity(intent);
+        new ProgressTask<Familia>(this){
+
+
+            @Override
+            protected Familia work() throws Exception {
+
+                String a="requestFamilia.json";
+                return server.getFamilia(a);
+            }
+
+            @Override
+            protected void onFinish(Familia result) {
+
+                data.putFamilia(result);
+                startModelActivity(FamiliaActivity.class);
+
+            }
+        }.execute();
     }
 
     public void buttonagurrak(View View){

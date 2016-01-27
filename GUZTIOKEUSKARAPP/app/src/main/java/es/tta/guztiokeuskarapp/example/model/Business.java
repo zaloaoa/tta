@@ -100,4 +100,25 @@ public class Business {
         }
     }
 
+    public Familia getFamilia(String a)throws IOException,JSONException{
+        try{
+            Familia familia=new Familia();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablafamilia");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Familia.Familiak fam=new Familia.Familiak();
+                fam.setPalabraCastellano(item.getString("palabraCastellano"));
+                fam.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                familia.getFamiliak().add(fam);
+
+            }
+            return familia;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
+
 }

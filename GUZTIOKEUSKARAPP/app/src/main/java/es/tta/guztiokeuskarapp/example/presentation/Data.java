@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import es.tta.guztiokeuskarapp.example.model.Ajetivo;
+import es.tta.guztiokeuskarapp.example.model.Familia;
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
 import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
@@ -20,6 +21,7 @@ public class Data {
     private final static String EXTRA_ITZULPEN="es.tta.guztiokeuskarapp.itzulpen";
     private final static String EXTRA_OBJETO="es.tta.guztiokeuskarapp.objeto";
     private final static String EXTRA_ADJETIVO="es.tta.guztiokeuskarapp.adjetivo";
+    private final static String EXTRA_FAMILIA="es.tta.guztiokeuskarapp.familia";
     private final Bundle bundle;
 
     public Data(Bundle bundle) {
@@ -129,6 +131,30 @@ public class Data {
 
     }
 
+    public Familia getFamilia(){
+
+        try {
+            Familia familia=new Familia();
+            JSONObject json=new JSONObject(bundle.getString(EXTRA_FAMILIA));
+            JSONArray array= json.getJSONArray("tablafamilia");
+            for(int i=0; i<array.length();i++) {
+                JSONObject item= array.getJSONObject(i);
+                Familia.Familiak fam=new Familia.Familiak();
+                fam.setPalabraCastellano(item.getString("palabraCastellano"));
+                fam.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                familia.getFamiliak().add(fam);
+            }
+
+            return familia;
+
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+
+    }
+
     public void putTraduccion(Traduccion traduccion){
         try {
             JSONObject json = new JSONObject();
@@ -203,6 +229,27 @@ public class Data {
             }
             json.put("tablaadjetivo", array);
             bundle.putString(EXTRA_ADJETIVO, json.toString());
+
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void putFamilia(Familia familia){
+        try {
+            JSONObject json = new JSONObject();
+            JSONArray array = new JSONArray();
+            for(Familia.Familiak fam : familia.getFamiliak()){
+                JSONObject item = new JSONObject();
+                item.put("palabraCastellano",fam.getPalabraCastellano());
+                item.put("tablaTraduccioncol",fam.getTablaTraduccioncol());
+                array.put(item);
+            }
+            json.put("tablafamilia", array);
+            bundle.putString(EXTRA_FAMILIA, json.toString());
 
 
         }catch (JSONException e){
