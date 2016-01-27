@@ -59,4 +59,25 @@ public class Business {
         }
     }
 
+    public Objeto getObjeto(String a)throws IOException,JSONException{
+        try{
+            Objeto objeto=new Objeto();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablaetxeko");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Objeto.Objektuak etxeko=new Objeto.Objektuak();
+                etxeko.setPalabraCastellano(item.getString("palabraCastellano"));
+                etxeko.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                objeto.getObjektuak().add(etxeko);
+
+            }
+            return objeto;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
+
 }

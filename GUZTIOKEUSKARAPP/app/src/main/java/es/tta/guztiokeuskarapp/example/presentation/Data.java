@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
+import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
 
 /**
@@ -16,6 +17,7 @@ import es.tta.guztiokeuskarapp.example.model.Traduccion;
 public class Data {
     private final static String EXTRA_TRADUCCION="es.tta.guztiokeuskarapp.traduccion";
     private final static String EXTRA_ITZULPEN="es.tta.guztiokeuskarapp.itzulpen";
+    private final static String EXTRA_OBJETO="es.tta.guztiokeuskarapp.objeto";
     private final Bundle bundle;
 
     public Data(Bundle bundle) {
@@ -77,6 +79,29 @@ public class Data {
         }
 
     }
+    public Objeto getObjeto(){
+
+        try {
+            Objeto objeto=new Objeto();
+            JSONObject json=new JSONObject(bundle.getString(EXTRA_OBJETO));
+            JSONArray array= json.getJSONArray("tablaetxeko");
+            for(int i=0; i<array.length();i++) {
+                JSONObject item= array.getJSONObject(i);
+                Objeto.Objektuak etxeko=new Objeto.Objektuak();
+                etxeko.setPalabraCastellano(item.getString("palabraCastellano"));
+                etxeko.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                objeto.getObjektuak().add(etxeko);
+            }
+
+            return objeto;
+
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+
+    }
 
     public void putTraduccion(Traduccion traduccion){
         try {
@@ -112,6 +137,27 @@ public class Data {
             json.put("tablaeskola",array);
             bundle.putString(EXTRA_ITZULPEN, json.toString());
             Log.e("guztiok", "entra en data putItzulpen"+json.toString());
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void putObjeto(Objeto objeto){
+        try {
+            JSONObject json = new JSONObject();
+            JSONArray array = new JSONArray();
+            for(Objeto.Objektuak etxeko : objeto.getObjektuak()){
+                JSONObject item = new JSONObject();
+                item.put("palabraCastellano",etxeko.getPalabraCastellano());
+                item.put("tablaTraduccioncol",etxeko.getTablaTraduccioncol());
+                array.put(item);
+            }
+            json.put("tablaetxeko",array);
+            bundle.putString(EXTRA_OBJETO, json.toString());
+
 
         }catch (JSONException e){
             e.printStackTrace();

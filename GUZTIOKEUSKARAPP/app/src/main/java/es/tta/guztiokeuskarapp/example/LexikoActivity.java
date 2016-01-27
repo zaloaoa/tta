@@ -11,6 +11,7 @@ import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
+import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
 import es.tta.guztiokeuskarapp.example.prof.views.ProgressTask;
 
@@ -55,9 +56,24 @@ public class LexikoActivity extends ModelActivity {
     }
 
     public void buttonetxeko(View view){
-        Intent intent=new Intent(this,EtxekoActivity.class);
-        startActivity(intent);
+        new ProgressTask<Objeto>(this){
 
+
+            @Override
+            protected Objeto work() throws Exception {
+
+                String a="requestEtxeko.json";
+                return server.getObjeto(a);
+            }
+
+            @Override
+            protected void onFinish(Objeto result) {
+
+                data.putObjeto(result);
+                startModelActivity(EtxekoActivity.class);
+
+            }
+        }.execute();
 
     }
 
