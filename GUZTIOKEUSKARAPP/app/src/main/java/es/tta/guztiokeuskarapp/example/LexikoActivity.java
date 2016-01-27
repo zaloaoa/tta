@@ -11,10 +11,13 @@ import android.view.View;
 
 import es.tta.guztiokeuskarapp.R;
 import es.tta.guztiokeuskarapp.example.model.Ajetivo;
+import es.tta.guztiokeuskarapp.example.model.Egunak;
 import es.tta.guztiokeuskarapp.example.model.Familia;
 import es.tta.guztiokeuskarapp.example.model.Itzulpen;
+import es.tta.guztiokeuskarapp.example.model.Kolorea;
 import es.tta.guztiokeuskarapp.example.model.Objeto;
 import es.tta.guztiokeuskarapp.example.model.Traduccion;
+import es.tta.guztiokeuskarapp.example.model.Zenbakia;
 import es.tta.guztiokeuskarapp.example.prof.views.ProgressTask;
 
 public class LexikoActivity extends ModelActivity {
@@ -102,18 +105,66 @@ public class LexikoActivity extends ModelActivity {
     }
 
     public void buttonegunak(View view){
-        Intent intent=new Intent(this,EgunakActivity.class);
-        startActivity(intent);
+        new ProgressTask<Egunak>(this){
+
+
+            @Override
+            protected Egunak work() throws Exception {
+
+                String a="requestEgunak.json";
+                return server.getEgunak(a);
+            }
+
+            @Override
+            protected void onFinish(Egunak result) {
+
+                data.putEgunak(result);
+                startModelActivity(EgunakActivity.class);
+
+            }
+        }.execute();
     }
 
     public void buttonzenbakiak(View view){
-        Intent intent=new Intent(this,ZenbakiakActivity.class);
-        startActivity(intent);
+        new ProgressTask<Zenbakia>(this){
+
+
+            @Override
+            protected Zenbakia work() throws Exception {
+
+                String a="requestZenbakiak.json";
+                return server.getZenbakia(a);
+            }
+
+            @Override
+            protected void onFinish(Zenbakia result) {
+
+                data.putZenbakia(result);
+                startModelActivity(ZenbakiakActivity.class);
+
+            }
+        }.execute();
     }
 
     public void buttonkoloreak (View view){
-        Intent intent=new Intent(this,KoloreakActivity.class);
-        startActivity(intent);
+        new ProgressTask<Kolorea>(this){
+
+
+            @Override
+            protected Kolorea work() throws Exception {
+
+                String a="requestKoloreak.json";
+                return server.getKolorea(a);
+            }
+
+            @Override
+            protected void onFinish(Kolorea result) {
+
+                data.putKolorea(result);
+                startModelActivity(KoloreakActivity.class);
+
+            }
+        }.execute();
     }
 
     public void buttonfamilia(View view){

@@ -120,5 +120,66 @@ public class Business {
             return null;
         }
     }
+    public Egunak getEgunak(String a)throws IOException,JSONException{
+        try{
+            Egunak egunak=new Egunak();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablaegunak");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Egunak.Eguna eg=new Egunak.Eguna();
+                eg.setPalabraCastellano(item.getString("palabraCastellano"));
+                eg.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                egunak.getEgunak().add(eg);
+
+            }
+            return egunak;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
+
+    public Kolorea getKolorea(String a)throws IOException,JSONException{
+        try{
+            Kolorea kolorea=new Kolorea();
+            JSONObject json= rest.getJson(String.format(a));
+            JSONArray array=json.getJSONArray("tablakoloreak");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Kolorea.Koloreak ko=new Kolorea.Koloreak();
+                ko.setPalabraCastellano(item.getString("palabraCastellano"));
+                ko.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                kolorea.getKoloreak().add(ko);
+
+            }
+            return kolorea;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
+    public Zenbakia getZenbakia(String ze)throws IOException,JSONException{
+        try{
+            Zenbakia zenbakia=new Zenbakia();
+            JSONObject json= rest.getJson(String.format(ze));
+            JSONArray array=json.getJSONArray("tablazenbakiak");
+            for(int i=0;i< array.length();i++){
+                JSONObject item= array.getJSONObject(i);
+                Zenbakia.Zenbakiak zen=new Zenbakia.Zenbakiak();
+                zen.setPalabraCastellano(item.getString("palabraCastellano"));
+                zen.setTablaTraduccioncol(item.getString("tablaTraduccioncol"));
+                zenbakia.getZenbakiak().add(zen);
+
+            }
+            return zenbakia;
+
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
 
 }
